@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
             itemCount: motors.length,
               itemBuilder: (BuildContext context, int index){
             return AppCards.MotoCard(
-                onTap: (){print('motor index $index');},
+                onTap: (){print('motor index $index');Navigator.pushNamed(context, 'moto_details_screen');},
                 imageUrl: motors[index]['imageUrl'],
                 brandName: motors[index]['brandName'],
                 frameDate: motors[index]['frameDate'].toString(),

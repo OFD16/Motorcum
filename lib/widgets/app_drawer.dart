@@ -96,6 +96,21 @@ class _AppDrawerState extends State<AppDrawer> {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: AppColors.lightBlue,
+                ),
+                child: ListTile(
+                  onTap: (){Navigator.pushNamed(context, 'forum_titles_screen');},
+                  title: Text('Forum', style: AppTexts.brandText),
+                ),
+              ),
+              const SizedBox(height: 10),
+              const Divider(
+                thickness: 2,
+              ),
+              const SizedBox(height: 10),
               AppButtons.DropDownButton(
                   isBlue: false,
                   label: 'Konum',
