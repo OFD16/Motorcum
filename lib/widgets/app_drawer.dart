@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:motorcum/desing/app_colors.dart';
-import 'package:motorcum/desing/app_texts.dart';
+import 'package:motorcum/design/app_colors.dart';
+import 'package:motorcum/design/app_texts.dart';
 import 'package:motorcum/widgets/app_buttons.dart';
 import 'package:motorcum/widgets/app_cards.dart';
 

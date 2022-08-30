@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../desing/app_colors.dart';
-import '../desing/app_texts.dart';
+import '../design/app_colors.dart';
+import '../design/app_texts.dart';
 
 class AppButtons{
 ///Listview içerisinde direk kullanırsak arpa planı direk tüm satırı kaplıyor

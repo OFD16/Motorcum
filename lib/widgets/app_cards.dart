@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:motorcum/desing/app_colors.dart';
-import 'package:motorcum/desing/app_texts.dart';
+import 'package:motorcum/design/app_colors.dart';
+import 'package:motorcum/design/app_texts.dart';
 
 class AppCards{
   
@@ -53,7 +53,7 @@ class AppCards{
     return InkWell(
       onTap: onTap,
       child: Material(
-        elevation: 4,
+        elevation: 2,
         child: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),

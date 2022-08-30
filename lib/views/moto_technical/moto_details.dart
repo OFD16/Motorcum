@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:motorcum/desing/app_colors.dart';
-import 'package:motorcum/desing/app_texts.dart';
+import 'package:motorcum/design/app_colors.dart';
+import 'package:motorcum/design/app_texts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class MotoDetails extends StatefulWidget {
@@ -46,7 +46,7 @@ class _MotoDetailsState extends State<MotoDetails> {
                       color: AppColors.lightBlue,
                       borderRadius: BorderRadius.circular(4),
                     ),
-                    child: Image.network(urlImage, fit: BoxFit.fill),
+                    child: Image.network(urlImage, fit: BoxFit.cover),
                   );
                 },
                 options: CarouselOptions(

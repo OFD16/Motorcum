@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:motorcum/desing/app_colors.dart';
-import 'package:motorcum/desing/app_texts.dart';
 import 'package:motorcum/widgets/app_cards.dart';
 import 'package:motorcum/widgets/app_drawer.dart';
 
@@ -64,13 +62,18 @@ class _HomePageState extends State<HomePage> {
             shrinkWrap: true,
             itemCount: motors.length,
               itemBuilder: (BuildContext context, int index){
-            return AppCards.MotoCard(
-                onTap: (){print('motor index $index');Navigator.pushNamed(context, 'moto_details_screen');},
-                imageUrl: motors[index]['imageUrl'],
-                brandName: motors[index]['brandName'],
-                frameDate: motors[index]['frameDate'].toString(),
-                price: '${motors[index]['price'].toString()} TL',
-                location: motors[index]['location']);
+            return Column(
+              children: [
+                AppCards.MotoCard(
+                    onTap: (){print('motor index $index');Navigator.pushNamed(context, 'moto_details_screen');},
+                    imageUrl: motors[index]['imageUrl'],
+                    brandName: motors[index]['brandName'],
+                    frameDate: motors[index]['frameDate'].toString(),
+                    price: '${motors[index]['price'].toString()} TL',
+                    location: motors[index]['location']),
+                const SizedBox(height: 20),
+              ],
+            );
           })
         ],
       ),

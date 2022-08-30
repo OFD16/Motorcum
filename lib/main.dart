@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:motorcum/desing/app_theme.dart';
+import 'package:motorcum/design/app_theme.dart';
 import 'package:motorcum/routes/routes.dart';
 import 'package:motorcum/states/states.dart';
 import 'package:motorcum/views/login.dart';

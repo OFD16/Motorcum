@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:motorcum/desing/app_texts.dart';
+import 'package:motorcum/design/app_texts.dart';
 
 class AppForms {
   static Widget TextField(
