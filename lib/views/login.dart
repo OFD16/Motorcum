@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20),
                 AppForms.TextField(label: 'Şifre', controller: _passwordController),
                 const SizedBox(height: 20),
-                ElevatedButton(onPressed: (){}, child: Text('Giriş Yap', style: AppTexts.buttonText,))
+                ElevatedButton(onPressed: (){Navigator.pushReplacementNamed(context, 'home_screen');}, child: Text('Giriş Yap', style: AppTexts.buttonText,))
               ],
             )
                 : Column(
@@ -113,18 +113,19 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      AppButtons.DropDownButton(label: 'Cinsiyet', value: genderValue, items: genderItems.map((String locationItems) {
+                      AppButtons.DropDownButton(isExpanded: false,label: 'Cinsiyet', value: genderValue, items: genderItems.map((String locationItems) {
                         return DropdownMenuItem(
                           value: locationItems,
                           child: Text(locationItems),
                         );
-                      }).toList(), onChanged: (String? newValue) {
+                      }).toList(),
+                        onChanged: (String? newValue) {
                         setState(() {
                           genderValue = newValue!;
                         });
                       },),
                   const SizedBox(width: 20),
-                      AppButtons.DropDownButton(label: 'Şehir', value: locationValue, items: locationItems.map((String locationItems) {
+                      AppButtons.DropDownButton(isExpanded: false,label: 'Şehir', value: locationValue, items: locationItems.map((String locationItems) {
                         return DropdownMenuItem(
                           value: locationItems,
                           child: Text(locationItems),
@@ -136,7 +137,7 @@ class _LoginPageState extends State<LoginPage> {
                       },),
                 ]),
                 const SizedBox(height: 20),
-                ElevatedButton(onPressed: (){}, child: Text('Kaydol', style: AppTexts.buttonText,))
+                ElevatedButton(onPressed: (){Navigator.pushReplacementNamed(context, 'home_screen');}, child: Text('Kaydol', style: AppTexts.buttonText,))
               ],
             ),
           ],

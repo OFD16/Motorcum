@@ -89,7 +89,16 @@ class AppTheme {
             return AppColors.appBlue;
           })
         )
-      )
+      ),
+      appBarTheme: AppBarTheme(
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: AppColors.appBlue,
+      ),
+      drawerTheme: DrawerThemeData(
+        backgroundColor: AppColors.appBlue
+      ),
+      dividerColor: AppColors.darkBlue,
     );
   }
 }

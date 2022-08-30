@@ -30,20 +30,23 @@ class AppButtons{
         required String? value,
         required void Function(String?)?  onChanged,
         required List<DropdownMenuItem<String>>? items,
+        bool isBlue = true,
+        bool isExpanded = true,
       }
       ){
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label,style: AppTexts.label,textAlign: TextAlign.start),
+        Text(label,style: isBlue == true ? AppTexts.label : AppTexts.buttonTextLightBlue,textAlign: TextAlign.start),
         Container(
           padding: const EdgeInsets.only(left: 20,right: 20),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
             border: Border.all(color: AppColors.darkBlue),
-            color: AppColors.lightBlue,
+            color: isBlue == true ? AppColors.lightBlue : AppColors.appWhite,
           ),
           child: DropdownButton<String>(
+            isExpanded: isExpanded,
             elevation: 0,
             value: value,
             items: items,
@@ -54,10 +57,3 @@ class AppButtons{
     );
   }
 }
-
-
-/* onChanged: (String? newValue) {
-          setState(() {
-            value = newValue!;
-          });
-        },*/
