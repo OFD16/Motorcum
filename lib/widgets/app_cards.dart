@@ -42,6 +42,7 @@ class AppCards{
       ),
     );
   }
+
   static Widget MotoCard ({
     required void Function()? onTap,
     required String imageUrl,
@@ -90,6 +91,41 @@ class AppCards{
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  static Widget ForumTitle ({
+    required void Function()? onTap,
+    required String mainTitle,
+    required String answers,
+    required String imageUrl,
+    required String owner,
+    required String date,
+  }){
+    return InkWell(
+      onTap: onTap,
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(child: Text(mainTitle, style: AppTexts.bigText)),
+              const SizedBox(width: 20),
+              Text(answers, style: AppTexts.bigTextLightBlue),
+            ],
+          ),
+          Row(
+            children: [
+              Image.network(imageUrl.isNotEmpty ? imageUrl : 'https://www.pngkey.com/png/detail/950-9501315_katie-notopoulos-katienotopoulos-i-write-about-tech-user.png', height: 30, width: 30),
+              Text(owner, style: AppTexts.label),
+              const SizedBox(width: 20),
+              Text(date, style: AppTexts.labelLightBlue),
+            ],
+          ),
+          const Divider(thickness: 2),
+        ],
       ),
     );
   }

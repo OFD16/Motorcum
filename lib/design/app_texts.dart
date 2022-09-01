@@ -4,6 +4,18 @@ import 'package:motorcum/design/app_colors.dart';
 
 
 class AppTexts{
+  static TextStyle bigText = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    letterSpacing: 0.4,
+    color: AppColors.darkBlue,
+  );
+  static TextStyle bigTextLightBlue = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    letterSpacing: 0.4,
+    color: AppColors.darkBlue.withOpacity(0.5),
+  );
   static TextStyle brandText = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.w600,

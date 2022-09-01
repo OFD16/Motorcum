@@ -100,8 +100,8 @@ class AppTheme {
       ),
       dividerColor: AppColors.darkBlue,
       scrollbarTheme: ScrollbarThemeData(
-        thumbColor: MaterialStateProperty.all(AppColors.lightBlue),
-      )
+        thumbColor: MaterialStateProperty.all(AppColors.darkBlue),
+      ),
     );
   }
 }

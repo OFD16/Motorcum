@@ -13,6 +13,8 @@ class AppDrawer extends StatefulWidget {
 }
 
 class _AppDrawerState extends State<AppDrawer> {
+  final ScrollController _brandScroller = ScrollController();
+  final ScrollController _typeScroller = ScrollController();
   String locationValue = 'İstanbul';
   var locationItems = [
     'İstanbul',
@@ -177,8 +179,10 @@ class _AppDrawerState extends State<AppDrawer> {
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child:Scrollbar(
+                      controller: _brandScroller,
                       thumbVisibility: true,
                       child:  ListView.builder(
+                        controller: _brandScroller,
                           padding: const EdgeInsets.all(10),
                           shrinkWrap: true,
                           itemCount: brands.length,
@@ -206,8 +210,10 @@ class _AppDrawerState extends State<AppDrawer> {
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Scrollbar(
+                      controller: _typeScroller,
                       thumbVisibility: true,
                       child: ListView.builder(
+                        controller: _typeScroller,
                           padding: const EdgeInsets.all(10),
                           shrinkWrap: true,
                           itemCount: types.length,
