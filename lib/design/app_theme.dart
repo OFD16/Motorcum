@@ -99,6 +99,9 @@ class AppTheme {
         backgroundColor: AppColors.appBlue
       ),
       dividerColor: AppColors.darkBlue,
+      scrollbarTheme: ScrollbarThemeData(
+        thumbColor: MaterialStateProperty.all(AppColors.lightBlue),
+      )
     );
   }
 }

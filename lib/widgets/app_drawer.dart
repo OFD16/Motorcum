@@ -76,6 +76,26 @@ class _AppDrawerState extends State<AppDrawer> {
       'imageUrl' : 'https://flyclipart.com/thumb2/logo-suzuki-motor-png-png-image-382431.png',
       'brandName' : 'Suzuki',
       'count' : 5
+    },
+    {
+      'imageUrl' : '',
+      'brandName' : 'CF Motor',
+      'count' : 7
+    },
+    {
+      'imageUrl' : 'https://seeklogo.com/images/M/mondial-motor-logo-14551213FB-seeklogo.com.png',
+      'brandName' : 'Mondial',
+      'count' : 10
+    },
+    {
+      'imageUrl' : 'https://w7.pngwing.com/pngs/635/851/png-transparent-honda-logo-car-motorcycle-honda-cb175-honda.png',
+      'brandName' : 'Honda',
+      'count' : 60
+    },
+    {
+      'imageUrl' : 'https://flyclipart.com/thumb2/logo-suzuki-motor-png-png-image-382431.png',
+      'brandName' : 'Suzuki',
+      'count' : 5
     }
   ];
 
@@ -151,23 +171,27 @@ class _AppDrawerState extends State<AppDrawer> {
                 children: [
                   Text('Markalar', style: AppTexts.buttonTextLightBlue,),
                   Container(
+                    height: 160,
                     decoration: BoxDecoration(
                       color: AppColors.appWhite,
                       borderRadius: BorderRadius.circular(4),
                     ),
-                    child: ListView.builder(
-                        padding: const EdgeInsets.all(10),
-                        shrinkWrap: true,
-                        itemCount: brands.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return AppCards.Brand(
-                            onTap: (){print('marka seçildi $index');},
-                            brandName: brands[index]['brandName'],
-                            imageUrl: brands[index]['imageUrl'],
-                            count: brands[index]['count'].toString(),
-                          );
-                        }
-                    ),
+                    child:Scrollbar(
+                      thumbVisibility: true,
+                      child:  ListView.builder(
+                          padding: const EdgeInsets.all(10),
+                          shrinkWrap: true,
+                          itemCount: brands.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return AppCards.Brand(
+                              onTap: (){print('marka seçildi $index');},
+                              brandName: brands[index]['brandName'],
+                              imageUrl: brands[index]['imageUrl'],
+                              count: brands[index]['count'].toString(),
+                            );
+                          }
+                      ),
+                    )
                   )
                 ],
               ),
@@ -176,24 +200,28 @@ class _AppDrawerState extends State<AppDrawer> {
                 children: [
                   Text('Tipi', style: AppTexts.buttonTextLightBlue,),
                   Container(
+                    height: 160,
                     decoration: BoxDecoration(
                       color: AppColors.appWhite,
                       borderRadius: BorderRadius.circular(4),
                     ),
-                    child: ListView.builder(
-                        padding: const EdgeInsets.all(10),
-                        shrinkWrap: true,
-                        itemCount: types.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return InkWell(
-                            onTap: (){print('tip seçildi $index');},
-                            child: Row(
-                              children: [
-                                Text(types[index], style: AppTexts.brandText)
-                              ],
-                            ),
-                          );
-                        }
+                    child: Scrollbar(
+                      thumbVisibility: true,
+                      child: ListView.builder(
+                          padding: const EdgeInsets.all(10),
+                          shrinkWrap: true,
+                          itemCount: types.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return InkWell(
+                              onTap: (){print('tip seçildi $index');},
+                              child: Row(
+                                children: [
+                                  Text(types[index], style: AppTexts.brandText)
+                                ],
+                              ),
+                            );
+                          }
+                      ),
                     ),
                   )
                 ],
