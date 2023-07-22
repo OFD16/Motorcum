@@ -1,16 +1,9 @@
-# motorcum
+# Motorcum
 
-This is a SOLVIO's project
+This is a SOLVIO's project. This application is a platform for moto-bikers and moto-lovers, where they can follow up and analyze the prices of engines, and give ideas and advice to each other about their engines (forum).
+![Motorcum](https://github.com/OFD16/Motorcum/assets/96663769/740f68e0-bad6-4fe4-8e2a-66a8be6ac3a3)
 
-## Getting Started
+## Authors
 
-This project is a starting point for a Flutter application.
+- [@OFD16](https://github.com/OFD16)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
